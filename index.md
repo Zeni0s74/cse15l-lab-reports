@@ -3,7 +3,7 @@
 
 **Now,** I may not understand *how* markdown works, but knowing how to *use* it is whats important
 neat
----
+***
 `list of cool animals and facts`
 
 3. Snakes
