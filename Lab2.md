@@ -81,3 +81,9 @@ public class ChatServer {
 That looks like a lot! However, everything in the `ChatServer` class is actually just passing instructions to teh provided `Server` class to start up the local host and let us interact with it! The real meat and potatoes is in the `Handler` class.
 
 Now, before we pick it apart, lets look at some pictures illustrating the server in use! After compiling the server and starting a local host, we get the following initial view:
+![Image](LB2pix1.jpg)
+
+After this, we'll edit our search bar twice with as shown in the following 2 pictures!
+
+![Image](berd.jpg)
+![Image](berd.jpg)
