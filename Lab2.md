@@ -78,7 +78,7 @@ public class ChatServer {
 }
 ```
 
-That looks like a lot! However, everything in the `ChatServer` class is actually just passing instructions to teh provided `Server` class to start up the local host and let us interact with it! The real meat and potatoes is in the `Handler` class.
+That looks like a lot! However, everything in the `ChatServer` class is actually just passing instructions to the provided `Server` class to start up the local host and let us interact with it! The real meat and potatoes is in the `Handler` class.
 
 Now, before we pick it apart, lets look at some pictures illustrating the server in use! After compiling the server and starting a local host, we get the following initial view:
 ![Image](LB2pix1.jpg)
@@ -107,7 +107,7 @@ Now that our `ChatLogArr` *isn't* empty, the next time we visit the main page, t
 
 ![Image](LB2pix4.jpg)
 
- And with that we see our code working properly and know *how* it works, nex lets get those other screenshots out of the way:
+ And with that we see our code working properly and know *how* it works, next lets get those other screenshots out of the way:
 
 ![Image](LB3pix1.jpg)
 
@@ -119,7 +119,7 @@ Now, we see the pair to our *private* key, the *public* key! Stored on the `ieng
 
 ![Image](LB3pix2.jpg)
 
-And Just for a little proof, we see the laptop who provided the *public* key gain access to teh `ieng6` server with no issue since the *public* and *private* keys match!
+And Just for a little proof, we see the laptop who provided the *public* key gain access to the `ieng6` server with no issue since the *public* and *private* keys match!
 
 
 As for a reflection on the last two weeks of labs, I found the ease of use of creating servers and sites to be very interesting! The local server acts as the first and easiest step to a website, while sshing into a communal server and uploading it there acts as the next step up since everyone under the same network can access it, and then the final step I would assume is makeing a private server that can handle outside visitors and traffic! Thats the next step in website creation that I'm very interested in, like how would I make a local host safely accessible? What if i wanted a custom domain?
