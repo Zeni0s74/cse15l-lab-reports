@@ -105,10 +105,21 @@ The 2nd screenshot is essentially doing the same thing all over again but with a
 
 Now that our `ChatLogArr` *isn't* empty, the next time we visit the main page, the code returns the contents of `superChat`, a value created in our `chatInitializer` helper class, which goes through the contents of our `ChatLogArr` and formats them such that when one long `String` made of its contents is returned, they display one after the other on a new line:
 
-![Image](LB2pix3.jpg)
+![Image](LB2pix4.jpg)
 
  And with that we see our code working properly and know *how* it works, nex lets get those other screenshots out of the way:
 
-![Image](LB2pix3.jpg)
-![Image](LB2pix3.jpg)
-![Image](LB2pix3.jpg)
+![Image](LB3pix1.jpg)
+
+Here we see the `list` leading to the location of our *private* key, you can tell because theres no `.pub` at the end!
+
+![Image](LB3pix3.jpg)
+
+Now, we see the pair to our *private* key, the *public* key! Stored on the `ieng6` server to allow us to connet from the specified device without needing a password.
+
+![Image](LB3pix2.jpg)
+
+And Just for a little proof, we see the laptop who provided the *public* key gain access to teh `ieng6` server with no issue since the *public* and *private* keys match!
+
+
+As for a reflection on the last two weeks of labs, I found the ease of use of creating servers and sites to be very interesting! The local server acts as the first and easiest step to a website, while sshing into a communal server and uploading it there acts as the next step up since everyone under the same network can access it, and then the final step I would assume is makeing a private server that can handle outside visitors and traffic! Thats the next step in website creation that I'm very interested in, like how would I make a local host safely accessible? What if i wanted a custom domain?
