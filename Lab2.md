@@ -29,8 +29,8 @@ class Handler implements URLHandler {
         if (url.getPath().equals("/")) {
 
             superChat = chatInitializer.format(ChatLogArr);
-            if(superChat.equals("")){return "Start a new conversatin!";}
-            return superChat;
+            if(superChat.equals("")){return "Start a new conversatin!";} 
+            return superChat; //I forgot to correct the spelling, ^ sue me
             
         } 
         else if (url.getPath().equals("/add-message")) {
@@ -85,5 +85,30 @@ Now, before we pick it apart, lets look at some pictures illustrating the server
 
 After this, we'll edit our search bar twice with as shown in the following 2 pictures!
 
-![Image](berd.jpg)
-![Image](berd.jpg)
+![Image](LB2pix2.jpg)
+![Image](LB2pix3.jpg)
+
+Lets break down whats going on here by looking at our code and the given extensions!
+Both pictures are essentially calling the same methods, just with slight differences in what is passed to the method!
+As shown by the `/add-message` declaration in the search bar right after the end of our `local server` adress, we dont want the default page!
+Luckily, we can see that the **30th** line of code in our file checks for this same extension! Right after, we tell java to chop up the rest of the input after this to bits, specifically bits seperated by `&`!
+
+Afterwards, we make sure to check the size of our cut up input, since we *expect* there to only be two calls, one for a **message** and the other for the **username**, any other size returns our little error text!
+
+Ok, so we're definitely working with 2 Strings, now what? What if i passed `/add-message?IsThisHowYouDoIT&Im not too sure`
+into the `URL`? thats the reason for our next check!
+We cut up our bits into smaller bits at every occurance of `=` and save them in their respective feilds! Then, we craft a pair of local `booleans` just so the code is easier to read. The two booleans act as verifications for the **message** and **username** parts of our argument! After we're double positive that our argument is in the correct format, the code starts to make some changes to our server!
+
+Reading from the `message` and `user` arrays, the code saves the 2nd value in each to seperate feilds, initializing a `usermsg` `String` value for us, we then take that `usermsg` and save it to our `ChatLogArr` `ArrayList` to be used the next time we call our main page all while returning something to end the loop and give the user some verification that the code is working properly.
+
+The 2nd screenshot is essentially doing the same thing all over again but with a different `message` and `user` array!
+
+Now that our `ChatLogArr` *isn't* empty, the next time we visit the main page, the code returns the contents of `superChat`, a value created in our `chatInitializer` helper class, which goes through the contents of our `ChatLogArr` and formats them such that when one long `String` made of its contents is returned, they display one after the other on a new line:
+
+![Image](LB2pix3.jpg)
+
+ And with that we see our code working properly and know *how* it works, nex lets get those other screenshots out of the way:
+
+![Image](LB2pix3.jpg)
+![Image](LB2pix3.jpg)
+![Image](LB2pix3.jpg)
