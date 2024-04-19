@@ -1,7 +1,7 @@
 # Welcome to the main hub for my coding projects
 ## Divided by class;
 
-[CSE15L](https://zeni0s74.github.io/cse15l-lab-reports/Lab1)
+[CSE15L](https://zeni0s74.github.io/cse15l-lab-reports/CSE15L)
 ```
 Anyway heres a bird since you got all the way to the end of the page.
 ```
