@@ -1,9 +1,9 @@
 #Lab 1 report
 ## basic filesystems commands
 ***
-For the first week of our software tools and techniques class we mainly focused on getting a general understanding of the most common commands we would use in bash and teh related directories or files we would use them with!
+For the first week of our software tools and techniques class we mainly focused on getting a general understanding of the most common commands we would use in bash and the related directories or files we would use them with!
 
-first up, `cd` 
+First up, `cd` 
 `cd` stands for "change directory" and just as the name implies, will change our current directory depending on the input we give it!
 Starting from `/workspaces/lecture1/` we can choose to hand `cd` nothing, a directory, or a file as an argument, heres those entries and their results in the order they were named!
 
@@ -78,7 +78,7 @@ cat: messages: Is a directory
 @Zeni0s74 ➜ /workspaces/lecture1 (main) $ 
 ```
 
-Heres a true **error** in the sense that terminal tells us its an error! Since `cat` is meant to return a files contents, it makes sense that it would break wihen given something that isnt a file, say like, a directory!
+Heres a true **error** in the sense that terminal tells us its an error! Since `cat` is meant to return a files contents, it makes sense that it would break when given something that isnt a file, say like, a directory!
 
 ```
 @Zeni0s74 ➜ /workspaces/lecture1 (main) $ cat Hello.java
@@ -95,7 +95,7 @@ public class Hello {
 }@Zeni0s74 ➜ /workspaces/lecture1 (main) $ 
 ```
 
-Finally, we see cat operating as it was described to! When we pass it `Hello.java`, its essentially prying the box open and telling us whats inside! after which it leaves us in the "room" that contained said "box" (It tells us whats in a file in the current directory while leaving us in said directory when we're done)
+Finally, we see `cat` operating as it was described to! When we pass it `Hello.java`, its essentially prying the box open and telling us whats inside! after which it leaves us in the "room" that contained said "box" (It tells us whats in a file in the current directory while leaving us in said directory when we're done)
 
 Now, I'm fairly sure thats all we had to do for our first lab report! Im still trying to get used to markdown so heres a picture of a bird just to be sure I know how to do that! :)
 
