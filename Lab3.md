@@ -57,3 +57,41 @@ public class ListTests {
 
 Now, the `merge` function is meant to take two `String` type `ArrayList`s and then combine them into an alphebetically ordered `ArrayList` containing *all* the words in the two inputs, runnign everything as-is, however, we get the following:
 
+![Image](Lab3ErrorPic.png)
+
+Huh, an out of memory error? How could that be! Our `Lists` are incredibly small when compared to the total storage available to Java! Well, this `symptom` is due to the `bug` that we know is present in the method's code.
+Looking closer, we see that in the following section:
+```
+}
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      index1 += 1;
+    }
+```
+We are incrementing the wrong index pointer when we are meant to go through the 2nd `List`! This causes our program to run indefinately as it tries to increment through the 2nd list with its while loop, eventuially using up all the `memory` available on the `stack`.
+
+Luckily, we had a well written test to pick out this `bug` however, not *all* tests would trap this `bug`! Lets try adding some list 1 with an wmpty list 2:
+
+```
+public class ListTests {
+    
+    @Test
+    public void testMerge(){
+        List<String> lst1 = new ArrayList<>();
+        List<String> lst2 = new ArrayList<>();
+        List<String> expected = new ArrayList<>();
+        List<String> result = new ArrayList<>();
+
+        lst1.add("apple"); lst1.add("clementine"); lst1.add("egg");
+        //lst2.add("burger"); lst2.add("danishes"); lst2.add("frenchToast");
+        expected.add("apple");expected.add("clementine");  expected.add("egg");
+
+        result = ListExamples.merge(lst1, lst2);
+
+        assertEquals(expected, result);
+    }
+
+}
+```
+Running the given test results in the following:
+![Image](Lab3ErrorPic.png)
