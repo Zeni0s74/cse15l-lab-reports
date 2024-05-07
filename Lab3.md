@@ -94,4 +94,46 @@ public class ListTests {
 }
 ```
 Running the given test results in the following:
-![Image](Lab3ErrorPic.png)
+![Image](Lab3FalsePass.png)
+
+Now our test passes just fine even if the bug isnt fixed at all! This is because with an empty `list2`, we never run into the broken while loop sincec its index already equals its length; zero.
+With those two examples, fixing the actual bug is quite easy, from the initial code that was first displayed, we make one simple change:
+```
+}
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      index2 += 1;
+    }
+```
+Index2! Now that index2 is being incrememnted as it should be, the while loop will end as intended with there are some iterations of list 2 to `merge`, and after the edit, our orginally failing test does run and give results as expected!
+
+
+**Now, onto part 2.**
+Over the last few weeks we have been exposed to even more interesting commands, one of the more interesting in my opinion, being `grep`! Standing for `"Global Regular Expression"`, the main purpose of `grep` is to take some input and search through said file for some other parameter that its passed!
+
+Before we get into the more interesting uses of grep, lets start with a basic case, in the `./docsearch/technical/plos` directory, calling
+```
+grep Kofi journal.pbio.0020001.txt
+```
+Will return:
+```
+Kofi Annan, the Secretary-General of the United Nations, recently called attention to
+```
+This is the only line in the `journal.pbio.0020001.txt` file that6 contained the string Kofi, so it was the only line printed in our terminal!
+
+Now, onto the first extended use of grep, courtesey of [StudyStream+](https://www.youtube.com/watch?v=zK5pGrPd_Zc&t=85s) !
+Taking advantage of `pipelining` we can instead pass an entire directory to `grep` should we choose to do so:
+
+```
+PC@DESKTOP-VM7AB4C MINGW64 ~/Downloads/CSE/CSE 15L/Lab rprt 3/docsearch/technical/plos (main)
+$ ls | grep  002011
+journal.pbio.0020112.txt
+journal.pbio.0020113.txt
+journal.pbio.0020116.txt
+pmed.0020113.txt
+pmed.0020114.txt
+pmed.0020115.txt
+pmed.0020116.txt
+pmed.0020117.txt
+pmed.0020118.txt
+```
