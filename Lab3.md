@@ -108,7 +108,7 @@ With those two examples, fixing the actual bug is quite easy, from the initial c
 Index2! Now that index2 is being incrememnted as it should be, the while loop will end as intended with there are some iterations of list 2 to `merge`, and after the edit, our orginally failing test does run and give results as expected!
 
 
-**Now, onto part 2.**
+# **Now, onto part 2.**
 Over the last few weeks we have been exposed to even more interesting commands, one of the more interesting in my opinion, being `grep`! Standing for `"Global Regular Expression"`, the main purpose of `grep` is to take some input and search through said file for some other parameter that its passed!
 
 Before we get into the more interesting uses of grep, lets start with a basic case, in the `./docsearch/technical/plos` directory, calling
@@ -137,3 +137,32 @@ pmed.0020116.txt
 pmed.0020117.txt
 pmed.0020118.txt
 ```
+Doing this lets us search an entire directory for a specific keyword! Above we see files starting with the numbers "002011".
+But, we could also use it to do something like:
+```
+Xenodrazon@DESKTOP-E1EME6V MINGW64 ~/technical/government/Post_Rate_Comm (main)
+$ ls | grep Cohenetal | grep .txt
+Cohenetal_comparison.txt
+Cohenetal_Cost_Function.txt
+Cohenetal_CreamSkimming.txt
+Cohenetal_DeliveryCost.txt
+Cohenetal_RuralDelivery.txt
+Cohenetal_Scale.txt
+```
+By taking advantage of `pipelining`, we could run multiple `grep` commands to find all the files in a directory of a specific type containing a specific keyword in its name!
+
+
+Running `grep` over the entirety of a directory is neat, but what about accessing the files *in* that directory?
+Well `grep` allows us to do just that aswell through adding a recursive flag!
+```
+Xenodrazon@DESKTOP-E1EME6V MINGW64 ~/technical/government/Post_Rate_Comm (main)
+$ ls | grep -r "make up"
+Cohenetal_CreamSkimming.txt:in any 5-Digit ZIP Code nor is it likely that they make up the
+Cohenetal_DeliveryCost.txt:the Rural National Mail Count System.21 City carriers make up 72
+Cohenetal_DeliveryCost.txt:percent of the routes and rural carriers make up the
+Gleiman_EMASpeech.txt:Congress appropriated tax dollars to make up the difference. The
+Mitchell_6-17-Mit.txt:below breakeven and will have to make up the losses with a price
+```
+The `-r` flag used right after `grep` tells the function to inspect each file it is passed closely, instead of just looking at the filename, `grep` accesses each file inside it and returns the filename alongwith the line that contains the keyword or words we asked it to search for!
+
+Here is one more example of running `grep` like that!
