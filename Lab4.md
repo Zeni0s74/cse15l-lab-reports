@@ -22,7 +22,7 @@ Total key string: `x` `i` `2` `esc` `:wq<enter>`
  ![Image](LB4pix4.jpg)
  ![Image](LB4pix5.jpg)
 
-Since we've fixed our code, our test scrit should work now, and after entering the following into the terminal, we see that it does! `bash<space>t<tab>`
+Since we've fixed our code, our test script should work now, and after entering the following into the terminal, we see that it does! `bash<space>t<tab>`
 
 ![Image](LB4pix6.jpg)
 
