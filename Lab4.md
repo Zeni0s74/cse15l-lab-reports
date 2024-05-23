@@ -27,8 +27,17 @@ Since we've fixed our code, our test script should work now, and after entering 
 ![Image](LB4pix6.jpg)
 
 Finally, to save our cahnges and update our fork, we can use the following strings in terminal:
+
 `git<space>add<space>.`
+
 `git<space>com<tab><space>-m<space>"fixed<space>incorrect<space>index<space>incrementation"`
+
 `git<space>pu<tab><space>or<tab><space>ma<tab>`
 
 ![Image](LB4pix7.jpg)
+
+With that, if we check our lab7 fork, we see that its been updated and we can see the update message we chose in the header
+
+![Image](LB4pix8.jpg)
+
+After confirming the push to github, we're all done!
