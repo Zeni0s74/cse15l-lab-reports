@@ -10,7 +10,7 @@ After we've confirmed we're logged in, we'll clone the fork of lab7 we made prev
 
 ![Image](LB4pix2.jpg)
 
-Just to be sure taht we're dealing with broken code, we `cd` into `lab7` and then use `bash test.sh` to run our tests and ensure they indeed don't work! From here, we can start using special characters to speed up our typing, the exact code being `cd<space>l<tab>` and `bash<space>t<tab>`!
+Just to be sure that we're dealing with broken code, we `cd` into `lab7` and then use `bash test.sh` to run our tests and ensure they indeed don't work! From here, we can start using special characters to speed up our typing, the exact code being `cd<space>l<tab>` and `bash<space>t<tab>`!
 
 ![Image](LB4pix3.jpg)
 
