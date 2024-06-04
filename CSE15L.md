@@ -9,3 +9,5 @@ but hey heres our current lab reports:
 [Lab3](https://zeni0s74.github.io/cse15l-lab-reports/Lab3)
 
 [Lab4](https://zeni0s74.github.io/cse15l-lab-reports/Lab4)
+
+[Lab5](https://zeni0s74.github.io/cse15l-lab-reports/Lab5)
